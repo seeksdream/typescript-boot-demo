@@ -1,6 +1,6 @@
 import {getDataBaseClient} from 'typescript-boot';
 import {throwWarningErrorIf} from 'typescript-boot';
-import {CustomSessionUser} from "../../relation-graph/AccountObjects";
+import {CustomSessionUser} from "../../AccountObjects";
 
 export class DemoDao {
   async getUserForLogin(userAccount:string, password:string):Promise<CustomSessionUser> {

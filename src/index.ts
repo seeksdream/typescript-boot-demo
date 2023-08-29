@@ -9,8 +9,9 @@ import {
 } from 'typescript-boot';
 import {AppConfig} from './AppConfig';
 import DemoService from "./services/seeks-boot-demo/DemoService";
-import AccountService from "./services/relation-graph/AccountService";
+import AccountService from "./services/AccountService";
 import {DefaultUserBehaviorLogger} from "./global-advice/UserBehaviorLogProvider";
+import {RoleService} from "./services/RoleService";
 setupServiceLogManager(new DefaultUserBehaviorLogger());
 setupDataBaseClient(new MysqlClient(AppConfig.MYSQL_CONFIG));
 setupSessionManager(new SessionManagerByFS(AppConfig.SESSION_EXPIRED_TIME, AppConfig.CORE_DATA_FOLDER));
@@ -19,5 +20,6 @@ const server = new SeeksWebServer(AppConfig.servicePort);
 server.setFontRootPath(AppConfig.UI_dist);
 // 以下是示例service
 server.publishService(new AccountService());
+server.publishService(new RoleService());
 server.publishService(new DemoService());
 server.start();
