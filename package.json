@@ -1,0 +1,33 @@
+{
+  "name": "typescript-boot",
+  "version": "1.0.0",
+  "description": "typescript-boot, This is a scaffolding that allows you to quickly start developing api interface services using typescript",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "dev": "nodemon --watch \"src/**/*.ts\" --ignore \"node_modules/**/*\" --exec ts-node src/index.ts",
+    "start": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seeksdream/typescript-boot.git"
+  },
+  "author": "",
+  "dependencies": {
+    "ts-node": "9.0.0",
+    "typescript": "4.0.2",
+    "typescript-boot": "^1.0.1",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.46",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "dmdb": "^1.0.17128",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "ioredis": "^5.3.2",
+    "mysql": "^2.18.1"
+  }
+}
